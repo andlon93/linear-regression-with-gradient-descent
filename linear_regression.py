@@ -14,5 +14,18 @@ def read_file(type):
 	fil.close()
 	return x1, x2, y
 #
-x1_train, x2_train, y_train = read_file("train")
-x1_test, x2_test, y_test = read_file("test")
+# --- Function maps x-vector inputs to y-values
+#     Input: x-vector, bias, weight
+#     Output: y
+def F(x_vector, bias, weight):
+	y = bias
+	for x in x_vector:
+		y += x*weight
+	return y
+#
+
+
+
+
+#x1_train, x2_train, y_train = read_file("train")
+#x1_test, x2_test, y_test = read_file("test")
